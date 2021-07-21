@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraFilterActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/activity_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        opencv:camera_id="any"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="right|top">
+
+    <ImageView
+        android:id="@+id/button_timer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        opencv:srcCompat="@drawable/ic_timer" />
+    <ImageView
+        android:id="@+id/button_text_recognition"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        opencv:srcCompat="@drawable/ic_text" />
+    <ImageView
+        android:id="@+id/button_face_recognition"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        opencv:srcCompat="@drawable/face" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageButton_screen_change"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right|bottom"
+        opencv:srcCompat="@drawable/ic_switch_camera" />
+
+    <ImageView
+        android:id="@+id/imageButton_take_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal|bottom"
+        opencv:srcCompat="@drawable/shoot" />
+
+    <ImageView
+        android:id="@+id/imageButton_image_processing"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_gravity="left|bottom"
+        android:layout_weight="1"
+        opencv:srcCompat="@drawable/ic_image_processing"
+        tools:ignore="RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+
+        <ImageView
+            android:id="@+id/button_basic"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            opencv:srcCompat="@drawable/basic"/>
+
+        <ImageView
+            android:id="@+id/button_gray"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            opencv:srcCompat="@drawable/gray" />
+
+        <ImageView
+            android:id="@+id/button_BGR"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            opencv:srcCompat="@drawable/bgr" />
+
+        <ImageView
+            android:id="@+id/button_HSV"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            opencv:srcCompat="@drawable/yuv" />
+
+        <ImageView
+            android:id="@+id/button_Luv"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            opencv:srcCompat="@drawable/luv" />
+
+    </LinearLayout>
+</FrameLayout>

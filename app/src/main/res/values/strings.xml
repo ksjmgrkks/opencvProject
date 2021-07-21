@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OpenCV App</string>
+    <string-array name="Timer_Pick">
+        <item>"없음"</item>
+        <item>"3초"</item>
+        <item>"5초"</item>
+        <item>"10초"</item>
+    </string-array>
+</resources>
